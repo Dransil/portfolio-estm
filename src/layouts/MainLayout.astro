@@ -1,0 +1,49 @@
+---
+// src/layouts/MainLayout.astro
+import '../styles/global.css';
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Portafolio de Emanuel - Desarrollador Fullstack" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-900 text-slate-100 font-['Inter',sans-serif] selection:bg-cyan-500/30">
+    
+    <nav class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-800/50 bg-slate-900/75">
+      <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Emanuel.dev
+        </a>
+        <div class="flex gap-6 text-sm font-medium">
+          <a href="#proyectos" class="hover:text-cyan-400 transition">Proyectos</a>
+          <a href="#sobre-mi" class="hover:text-cyan-400 transition">Sobre mí</a>
+          <a href="mailto:tu-correo@email.com" class="hover:text-cyan-400 transition text-cyan-400 border border-cyan-400/30 px-3 py-1 rounded-full">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 py-12">
+      <slot />
+    </main>
+
+    <footer class="border-t border-slate-800 py-8 mt-20">
+      <div class="max-w-5xl mx-auto px-4 text-center text-slate-500 text-sm">
+        <p>© {new Date().getFullYear()} - Hecho con Astro y Tailwind desde Cochabamba 🇧🇴</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
