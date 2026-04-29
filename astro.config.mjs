@@ -5,7 +5,7 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://Dransil.github.io',
+  site: 'https://dransil.github.io',
   base: '/portfolio-estm/',
   vite: {
     plugins: [tailwindcss()]
