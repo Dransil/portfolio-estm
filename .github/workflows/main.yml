@@ -32,7 +32,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Astro genera todo en la carpeta dist
+          path: ./dist # Es la carpeta que genera Astro por defecto
 
   deploy:
     needs: build
