@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon/components';
+interface Props {
+  name: string;
+  icon: string;
+}
+const { name, icon } = Astro.props;
+---
+<div class="flex flex-col items-center gap-2 group">
+  <div class="p-4 rounded-xl bg-bg-card border border-border-subtle group-hover:border-brand-scarlet group-hover:shadow-[0_0_15px_rgba(220,38,38,0.2)] transition-all duration-300">
+    <Icon name={icon} class="w-8 h-8 text-text-muted group-hover:text-brand-red-bright transition-colors" />
+  </div>
+  <span class="text-xs font-medium text-text-muted group-hover:text-white transition-colors">{name}</span>
+</div>

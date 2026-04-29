@@ -1,34 +1,118 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import SkillIcon from "../components/SkillIcon.astro";
 ---
 
 <MainLayout title="Emanuel | Software Developer">
-  <section class="py-20">
-    <h1 class="text-5xl font-bold mb-4">
-      Hola, soy <span class="text-cyan-400">Emanuel</span>
-    </h1>
-    <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
-      Desarrollador enfocado en soluciones escalables con <span class="text-white">Flutter</span> y <span class="text-white">Node.js</span>. 
-      Actualmente construyendo sistemas para optimizar negocios en Bolivia.
-    </p>
-    
-    <div class="mt-8 flex gap-4">
-       <a href="#proyectos" class="bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold py-3 px-6 rounded-lg transition">
-         Ver Proyectos
-       </a>
-    </div>
-  </section>
+  <section id="sobre-mi" class="py-30">
+    <div class="space-y-4 min-h-[58vh]" >
+      <h1 class="text-5xl font-bold mb-4">Hola, soy</h1>
+      <h2 class="text-5xl font-bold mb-8 text-brand-red-bright block">
+        Emanuel Taquichiri
+      </h2>
 
-  <section id="proyectos" class="pt-20">
-    <h2 class="text-3xl font-bold mb-10">Proyectos Destacados</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-        <h3 class="text-xl font-bold">Sistema POS Mobile</h3>
-        <p class="text-slate-400 mt-2">Punto de venta desarrollado con Flutter y backend en Node.js.</p>
+      <p class="text-xl text-text-muted max-w-2xl leading-relaxed text-justify">
+        Soy una persona con mucha pasión por los proyectos de programación. Me
+        encanta el <span class="text-white">Frontend</span> y el <span
+          class="text-white">Backend</span
+        > en aplicaciones web, así mismo me gusta el desarrollo <span class="text-white">Mobile</span>. Estoy abierto para trabajar y motivado para aprender
+        constantemente.
+      </p>
+
+      <div class="mt-8 flex gap-4">
+        <a
+          href="#proyectos"
+          class="bg-brand-scarlet hover:bg-brand-red-bright text-white font-bold py-3 px-6 rounded-lg transition shadow-lg shadow-brand-scarlet/20"
+        >
+          Ver Proyectos
+        </a>
       </div>
     </div>
+
+    <section id="proyectos" class="pt-20">
+      <div class="flex items-center gap-4 mb-12">
+        <h2 class="text-3xl font-bold text-white">Proyectos destacados</h2>
+        <div class="h-[1px] flex-grow bg-border-subtle"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <ProjectCard
+          title="Sistema documental de archivos"
+          description="Sistema de gestión de documentos construido con Flutter. Enfocado en la organización y flujo de información institucional."
+          tags={["Flutter", "Dart", "Node.JS"]}
+          github="https://github.com/Dransil/ProyectoDocumentos"
+        />
+        <ProjectCard
+          title="OBD-II App para monitoreo vehicular"
+          description="Sistema multiplataforma en Flutter para leer datos de un vehículo en tiempo real."
+          tags={["Flutter", "Dart", "Clean Architecture"]}
+          github="https://github.com/Dransil/obdapp"
+        />
+        <ProjectCard
+          title="App SafeTrack"
+          description="Aplicación en Flutter orientada al cuidado de seres queridos en tiempo real con geolocalización."
+          tags={["Flutter", "Dart", "Clean Architecture"]}
+          github="https://github.com/Dransil/Flutter-Tracker-App"
+        />
+        <ProjectCard
+          title="Sistema para dentistas: Vitalia"
+          description="Sistema de gestión de citas y administración construido con Flutter. Dirigido al flujo de atención y administración de pacientes."
+          tags={["Node.JS", "React Vite", "Clean Architecture"]}
+          github="https://github.com/Dransil/vitalia-project"
+        />
+
+        <ProjectCard
+          title="Point of Sale (POS)"
+          description="Sistema de punto de venta con backend, frontend web y aplicación móvil. Incluye gestión de inventarios y reportes."
+          tags={["Next.js", "Node.js", "PostgreSQL", "Flutter" ]}
+          github="https://github.com/Dransil/sistema-api-restaurante"
+        />
+      </div>
+    </section>
+    <section id="stack" class="py-20">
+      <div class="flex items-center gap-4 mb-12">
+        <h2 class="text-3xl font-bold text-white">Stack Tecnológico</h2>
+        <div class="h-[1px] flex-grow bg-border-subtle"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="space-y-6">
+          <h3
+            class="text-brand-red-bright font-bold uppercase tracking-widest text-sm"
+          >
+            Mobile
+          </h3>
+          <div class="flex flex-wrap gap-6">
+            <SkillIcon name="Flutter" icon="simple-icons:flutter" />
+            <SkillIcon name="Dart" icon="simple-icons:dart" />
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <h3
+            class="text-brand-red-bright font-bold uppercase tracking-widest text-sm"
+          >
+            Frontend
+          </h3>
+          <div class="flex flex-wrap gap-6">
+            <SkillIcon name="React" icon="simple-icons:react" />
+            <SkillIcon name="Vue" icon="simple-icons:vuedotjs" />
+            <SkillIcon name="JS" icon="simple-icons:javascript" />
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <h3
+            class="text-brand-red-bright font-bold uppercase tracking-widest text-sm"
+          >
+            Backend
+          </h3>
+          <div class="flex flex-wrap gap-6">
+            <SkillIcon name="Node.js" icon="simple-icons:nodedotjs" />
+            <SkillIcon name="C#" icon="simple-icons:csharp" />
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 </MainLayout>

@@ -1,0 +1,21 @@
+---
+// src/components/Navbar.astro
+---
+<nav class="sticky top-0 z-40 w-full backdrop-blur-md flex-none transition-colors duration-500 lg:z-50 border-b border-border-subtle bg-bg-page/80">
+  <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="/" class="text-xl font-bold bg-gradient-to-r from-brand-red-bright to-brand-scarlet bg-clip-text text-transparent hover:scale-105 transition-transform">
+      Emanuel.dev
+    </a>
+    
+    <div class="flex gap-6 text-sm font-medium items-center">
+      <a href="/#proyectos" class="text-text-muted hover:text-brand-red-bright transition-colors">Proyectos</a>
+      <a href="/#sobre-mi" class="text-text-muted hover:text-brand-red-bright transition-colors">Sobre mí</a>
+      <a 
+        href="mailto:taquichiriemanuel0809@gmail.com" 
+        class="transition-all text-brand-red-bright border border-brand-scarlet/40 hover:border-brand-scarlet hover:bg-brand-scarlet/10 px-4 py-1.5 rounded-full"
+      >
+        Contacto
+      </a>
+    </div>
+  </div>
+</nav>

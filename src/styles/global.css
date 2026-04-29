@@ -1,1 +1,16 @@
 @import "tailwindcss";
+@theme {
+  --color-bg-page: #0a0a0a;
+  --color-bg-card: #161616;
+  --color-border-subtle: #262626;
+  
+  --color-brand-scarlet: #dc2626; /* red-600 de Tailwind */
+  --color-brand-red-bright: #ef4444; /* red-500 de Tailwind */
+  
+  --color-text-base: #e5e5e5; /* slate-200 */
+  --color-text-muted: #a3a3a3; /* slate-400 */
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+}
