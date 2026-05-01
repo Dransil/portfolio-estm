@@ -1,22 +1,29 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro"; // Verifica que la ruta sea correcta
-import SkillIcon from "../components/SkillIcon.astro";   // Verifica que la ruta sea correcta
+import SkillIcon from "../components/SkillIcon.astro"; // Verifica que la ruta sea correcta
 ---
 
 <MainLayout title="Emanuel | Software Developer">
-  <section id="sobre-mi" class="py-30 min-h-[80vh] flex flex-col justify-center">
+  <section
+    id="sobre-mi"
+    class="py-30 min-h-[80vh] flex flex-col justify-center"
+  >
     <div class="space-y-4">
       <h1 class="text-5xl font-bold mb-4 text-white">Hola, soy</h1>
       <h2 class="text-5xl font-bold mb-8 text-brand-red-bright block">
         Emanuel Taquichiri
       </h2>
 
-      <p class="text-xl text-text-muted max-w-2xl leading-[1.8] tracking-wide text-justify">
+      <p
+        class="text-xl text-text-muted max-w-2xl leading-[1.8] tracking-wide text-justify"
+      >
         Soy una persona con mucha pasión por los proyectos de programación. Me
         encanta el <span class="text-white">Frontend</span> y el <span
-          class="text-white">Backend</span> en aplicaciones web, así mismo me gusta el desarrollo <span class="text-white">Mobile</span>. Estoy abierto para trabajar y motivado para aprender
-        constantemente.
+          class="text-white">Backend</span
+        > en aplicaciones web, así mismo me gusta el desarrollo <span
+          class="text-white">Mobile</span
+        >. Estoy abierto para trabajar y motivado para aprender constantemente.
       </p>
 
       <div class="mt-8 flex gap-4">
@@ -28,12 +35,13 @@ import SkillIcon from "../components/SkillIcon.astro";   // Verifica que la ruta
         </a>
       </div>
     </div>
-  </section> <section id="proyectos" class="py-20">
+  </section>
+  <section id="proyectos" class="py-20">
     <div class="flex items-center gap-4 mb-12">
       <h2 class="text-3xl font-bold text-white">Proyectos destacados</h2>
       <div class="h-[1px] flex-grow bg-border-subtle"></div>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <ProjectCard
         title="Sistema documental de archivos"
@@ -42,11 +50,11 @@ import SkillIcon from "../components/SkillIcon.astro";   // Verifica que la ruta
         github="https://github.com/Dransil/ProyectoDocumentos"
       />
       <ProjectCard
-          title="Point of Sale (POS)"
-          description="Sistema de punto de venta con backend, frontend web y aplicación móvil. Incluye gestión de inventarios y reportes."
-          tags={["Next.js", "Node.js", "PostgreSQL", "Flutter" ]}
-          github="https://github.com/Dransil/sistema-api-restaurante"
-        />
+        title="Point of Sale (POS)"
+        description="Sistema de punto de venta con backend, frontend web y aplicación móvil. Incluye gestión de inventarios y reportes."
+        tags={["Next.js", "Node.js", "PostgreSQL", "Flutter"]}
+        github="https://github.com/Dransil/sistema-api-restaurante"
+      />
     </div>
   </section>
 
@@ -57,13 +65,17 @@ import SkillIcon from "../components/SkillIcon.astro";   // Verifica que la ruta
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div class="space-y-6">
-            <h3 class="text-brand-red-bright font-bold uppercase tracking-widest text-sm">Mobile</h3>
-            <div class="flex flex-wrap gap-6">
-              <SkillIcon name="Flutter" icon="simple-icons:flutter" />
-              <SkillIcon name="Dart" icon="simple-icons:dart" />
-            </div>
+      <div class="space-y-6">
+        <h3
+          class="text-brand-red-bright font-bold uppercase tracking-widest text-sm"
+        >
+          Mobile
+        </h3>
+        <div class="flex flex-wrap gap-6">
+          <SkillIcon name="Flutter" icon="simple-icons:flutter" />
+          <SkillIcon name="Dart" icon="simple-icons:dart" />
         </div>
-        </div>
+      </div>
+    </div>
   </section>
 </MainLayout>
